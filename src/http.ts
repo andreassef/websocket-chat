@@ -19,24 +19,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 
 const io = new Server(server);
 
-io.on("connection", (socket) => {
-    
-    console.log("Socket", socket.id);
-
-    // socket.on("start", async (data) => {
-    //     console.log("Passou aqui?");
-    //     const { email, avatar, name } = data;
-    //     const createUserService = container.resolve(CreateUserService);
-
-    //     const user = await createUserService.execute({
-    //         email,
-    //         avatar,
-    //         name,
-    //         socket_id: socket.id
-    //     });
-    //     console.log(user);
-    // });
-});
+io.on("connection", (socket) => {});
 
 
 export {
