@@ -69,7 +69,6 @@ io.on("connect", (socket) => {
 
         // enviar notificacao para usuário especifíco
         const room = await getChatRoomByIdService.execute(data.idChatRoom);
-        console.log(room);
         const userFrom = room.idUsers.find(response => String(response._id) !== String(user._id));
 
         io.to(userFrom.socket_id).emit("notification", {
